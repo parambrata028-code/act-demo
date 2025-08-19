@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATC — Commission</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--muted:#6b7280;--primary:#0f6cfb;--radius:12px;--shadow:0 10px 30px rgba(2,6,23,0.06)}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui;background:var(--bg)}
+    nav{background:#0b1220;padding:12px;color:#fff}
+    .container{max-width:1000px;margin:28px auto;padding:16px}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    td,th{padding:10px;border-bottom:1px solid #eef2f7;text-align:left}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <nav>
+    <div style="max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:800">ATC — Commission</div>
+      <div><a href="index.html" style="color:#dbeafe;text-decoration:none">Home</a></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 style="margin:0 0 8px">Commission & Payouts</h1>
+    <p class="muted">We keep profit sharing straightforward. Below is an example and explanation of how payouts are handled.</p>
+
+    <div class="card" style="margin-top:16px">
+      <h3 style="margin-top:0">Default Example</h3>
+      <p class="muted">On realized profit the split (example):</p>
+      <table>
+        <thead><tr><th>Recipient</th><th>Share (%)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Investor</td><td><strong>70%</strong></td><td>Primary beneficiary — receives majority of profit.</td></tr>
+          <tr><td>Trader</td><td><strong>20%</strong></td><td>Performance fee for trader skill & execution.</td></tr>
+          <tr><td>Platform (ATC)</td><td><strong>10%</strong></td><td>Platform operation & compliance fee.</td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top:18px">Key points</h4>
+      <ul style="color:var(--muted)">
+        <li>Payouts occur only on realized profits confirmed by broker/escrow.</li>
+        <li>All transfers are auditable and transparent in the investor dashboard.</li>
+        <li>Custom splits per deal can be negotiated and encoded in contract.</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

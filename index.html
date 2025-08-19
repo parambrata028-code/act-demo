@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATC — All Traders Connection</title>
+  <style>
+    :root{
+      --primary:#0f6cfb;
+      --accent:#108981;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(2,6,23,0.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+    /* Navbar */
+    nav{background:#0b1220; color:#fff; position:sticky; top:0; z-index:40; box-shadow:0 2px 8px rgba(2,6,23,0.06)}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:42px;height:42px;border-radius:10px;background:var(--primary);display:grid;place-items:center;color:#fff;font-weight:900}
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{color:#dbeafe;text-decoration:none;padding:8px 10px;border-radius:9px;font-weight:600}
+    .nav-links a.active, .nav-links a:hover{background:rgba(255,255,255,0.06);color:#fff}
+
+    /* Hero */
+    .hero{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;padding:72px 20px}
+    .hero-inner{max-width:1200px;margin:0 auto;display:flex;gap:40px;align-items:center;justify-content:space-between}
+    .hero-left{max-width:650px}
+    .kicker{display:inline-block;background:rgba(255,255,255,0.12);padding:6px 10px;border-radius:999px;font-weight:700;margin-bottom:16px}
+    .hero h1{font-size:40px;line-height:1.02;margin:0 0 14px}
+    .hero p{margin:0 0 22px;color:rgba(255,255,255,0.92);font-size:16px}
+    .cta-group{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:#fff;color:var(--primary)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12)}
+
+    .hero-right{background:rgba(255,255,255,0.06);padding:20px;border-radius:12px;min-width:280px;box-shadow:var(--shadow);color:#fff}
+    .stat-row{display:flex;gap:18px;justify-content:space-between}
+    .stat{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:left;width:48%}
+    .stat .v{font-weight:800;font-size:20px}
+
+    /* Features */
+    .section{max-width:1200px;margin:0 auto;padding:56px 20px}
+    .section h2{font-size:26px;margin:0 0 10px}
+    .section p.lead{color:var(--muted);margin:0 0 22px}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* About / CTA / Footer */
+    .about{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+    .about img{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+    .cta-strip{background:linear-gradient(90deg,#0f6cfb,#0d9488);padding:44px 20px;border-radius:12px;color:#fff;margin-top:24px}
+    footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-inner{flex-direction:column;align-items:flex-start}
+      .hero-right{width:100%}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div>ATC — All Traders Connection</div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="traders.html">Traders</a>
+        <a href="investors.html">Investors</a>
+        <a href="commission.html">Commission</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="kicker">Investor – Trader Connect</div>
+        <h1>Connect. Allocate. Grow — with <span style="color:#fff">ATC</span></h1>
+        <p>Neutral marketplace for verified traders and investors. Secure allocations via broker/escrow and transparent profit splitting.</p>
+        <div class="cta-group">
+          <button class="btn btn-primary" onclick="location.href='traders.html'">Explore Traders</button>
+          <button class="btn btn-ghost" onclick="location.href='about.html'">How it works</button>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-labelledby="stats">
+        <div class="stat-row" id="stats">
+          <div class="stat">
+            <div class="k">Total Traders</div>
+            <div class="v">5</div>
+          </div>
+          <div class="stat">
+            <div class="k">Avg ROI (12m)</div>
+            <div class="v">28.8%</div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="k">Investors Onboarded</div>
+            <div class="v">120+</div>
+          </div>
+          <div class="stat">
+            <div class="k">Escrow Secured</div>
+            <div class="v">Yes</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2>Why ATC?</h2>
+    <p class="lead">We provide verified trader performance, safe allocation flow and transparent revenue split so investors and traders can focus on returns.</p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Verified Performance</h3>
+        <p>Traders connect broker APIs (demo can be integrated later) and their past P&L gets verified automatically.</p>
+      </div>
+      <div class="card">
+        <h3>Escrow & Safety</h3>
+        <p>Investor capital sits in escrow/broker-controlled accounts — traders never directly custody investor funds.</p>
+      </div>
+      <div class="card">
+        <h3>Transparent Split</h3>
+        <p>Profit sharing rules are visible upfront — investors, traders and ATC share the realized profit per agreed slabs.</p>
+      </div>
+      <div class="card">
+        <h3>Risk Controls</h3>
+        <p>Position sizing, max drawdown & daily loss limits keep capital protected across allocations.</p>
+      </div>
+      <div class="card">
+        <h3>Community & Education</h3>
+        <p>Forums, curated research and training material help traders and investors make better decisions.</p>
+      </div>
+      <div class="card">
+        <h3>Subscription Options</h3>
+        <p>Premium match-making, enhanced analytics and priority access for paid subscribers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" aria-labelledby="aboutTitle">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto">
+      <div style="flex:1;min-width:280px">
+        <h2 id="aboutTitle">About ATC</h2>
+        <p class="lead">ATC is a neutral marketplace connecting investors with professional traders — built with compliance, security and transparency at the core.</p>
+        <p style="color:var(--muted)">Founder: Parambrata Sen — Head of Trading Strategy. Model: Platform connects and facilitates, not a fund manager; avoids custody exposure.</p>
+      </div>
+      <div style="flex:1;min-width:280px">
+        <img src="https://source.unsplash.com/800x520/?finance,trading" alt="ATC" style="width:100%;border-radius:12px;box-shadow:var(--shadow)">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="section cta-strip">
+    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+      <div>
+        <h3 style="margin:0 0 6px">Ready to connect with proven traders?</h3>
+        <div style="color:rgba(255,255,255,0.9)">Create an account, complete KYC and start allocating capital securely.</div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-primary" onclick="location.href='investors.html'">Join as Investor</button>
+        <button class="btn btn-ghost" onclick="location.href='traders.html'">Apply as Trader</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="margin-bottom:8px">© <span id="year"></span> ATC — All Traders Connection</div>
+      <div style="color:var(--muted)">Terms • Privacy • Contact</div>
+    </div>
+  </footer>
+
+  <script>
+    // small helper
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
